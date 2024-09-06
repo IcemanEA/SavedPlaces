@@ -1,5 +1,5 @@
 //
-//  SavedPlaceListViewController.swift
+//  SavedPlaceViewController.swift
 //  savedplaces
 //
 //  Created by Alexander Zhuchkov on 05.09.2024.
@@ -7,82 +7,88 @@
 
 import UIKit
 import LaudoKit
-import Combine
+import Stevia
 
-// MARK: - View Controller
-class SavedPlaceListViewController: NiblessViewController {
+final class SavedPlaceListViewController: NiblessViewController {
     
-    // MARK: - Input
-    private let viewModel: SavedPlaceListViewViewModelType
-    private let ui: SavedPlaceListUIView
+    // MARK: - Types
+    typealias DataSource = UITableViewDiffableDataSource<String, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<String, String>
     
-    // MARK: - Output
-    var didHide: (() -> Void)?
+    // MARK: - Internal Properties
+    private let viewModel: SavedPlaceListViewModelType
     
+    // MARK: - Subviews
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        
+        tableView.delegate = self
+        tableView.register(SavedPlaceCell.self, forCellReuseIdentifier: SavedPlaceCell.identifier)
+        
+        return tableView
+    }()
     
-    // MARK: - Properties
-    private var bindings = Set<AnyCancellable>()
+    private lazy var dataSource: DataSource = {
+        return DataSource(tableView: tableView) { tableView, indexPath, itemIdentifier in
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: SavedPlaceCell.identifier, for: indexPath)
+            
+         //   (cell as? SavedPlaceCell)?.configure(with: ...)
+            
+            return cell
+        }
+    }()
     
     // MARK: - Initialization
-    init(viewModel: SavedPlaceListViewViewModelType, ui: SavedPlaceListUIView = SavedPlaceListView()) {
-        
-        // Properties
+    init(viewModel: SavedPlaceListViewModelType) {
         self.viewModel = viewModel
-        self.ui = ui
-        
-        // Super Initilizer
         super.init()
         
-        // Setup
-        self.ui.responder = self
-        self.title = "Saved Place List"
+        
+        self.title = "DEMO"
     }
     
     // MARK: - Methods
     private func setupView() {
-       
+        view.backgroundColor = .systemBackground
+        
+        view.subviews {
+            tableView
+        }
+        
+        tableView.fillContainer()
+        
+        updateView()
     }
     
     private func updateView() {
+        var snapshot = Snapshot()
+        snapshot.appendSections([""])
+        
+        var items = [String]()
+        for idx in 1...100 {
+            items.append("Item \(idx)" )
+        }
+        snapshot.appendItems(items, toSection: "")
+        
+        dataSource.apply(snapshot)
         
     }
     
-    private func setupViewModel() {
-        viewModel.statePublisher.sink { [weak self] state in
-            self?.ui.update(state: state)
-        }.store(in: &bindings)
-    }
-    
-    // MARK: - Helper Methods
 }
 
-
-// MARK: - View Controller Life Cycle
+// MARK: - ViewController Life Cycle
 extension SavedPlaceListViewController {
-    
-    override func loadView() {
-        view = ui
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
-        setupViewModel()
     }
-    
 }
 
-// MARK: - UIResponder
-extension SavedPlaceListViewController: SavedPlaceListViewResponder {
-    func savedPlaceListView(_ view: any SavedPlaceListViewType, didSelectSavedPlaceAt index: Int) {
-        viewModel.selectSavedPlace(at: index)
+// MARK: - UITableViewDelegate
+extension SavedPlaceListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("SELECT at indexPath", indexPath)
     }
-    
-    func savedPlaceListViewDidTapButton(_ view: any SavedPlaceListViewType) {
-        viewModel.changeState()
-    }
-    
-    
-    
 }

@@ -8,7 +8,7 @@
 import UIKit
 import LaudoKit
 
-class MainFlowCoordinator: Coordinator {
+final class MainFlowCoordinator: Coordinator {
     
     // MARK: - Internal Properties
     private let navigationController = UINavigationController()
@@ -25,8 +25,8 @@ class MainFlowCoordinator: Coordinator {
         
         showMain()
         
-        DispatchQueue.main.async {
-            self.runSavedPlaceFlow()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.runSavedPlaceListFlow()
         }
     }
     
@@ -37,6 +37,10 @@ class MainFlowCoordinator: Coordinator {
         let viewController = MainViewController()
         
         // Install Handlers
+        viewController.didSelectUIExample = { [weak self] in
+            self?.runUIExampleFlow()
+        }
+        
         viewController.didSelectSavedPlaceList = { [weak self] in
             self?.runSavedPlaceListFlow()
         }
@@ -49,10 +53,8 @@ class MainFlowCoordinator: Coordinator {
             self?.runSavedPlaceDetailHorizontalFlow()
         }
         
-        
         // Show
         navigationController.pushViewController(viewController, animated: false)
-        
     }
     
     private func runSavedPlaceListFlow() {
@@ -70,8 +72,8 @@ class MainFlowCoordinator: Coordinator {
         pushCoordinator(coordinator)
     }
     
-    private func runSavedPlaceFlow() {
-        let coordinator = SavedPlaceFlowCoordinator(navigationController: navigationController)
+    private func runUIExampleFlow() {
+        let coordinator = UIExampleFlowCoordinator(navigationController: navigationController)
         pushCoordinator(coordinator)
     }
 }

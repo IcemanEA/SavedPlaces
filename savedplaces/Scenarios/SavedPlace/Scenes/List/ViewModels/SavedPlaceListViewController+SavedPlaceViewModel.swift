@@ -8,8 +8,8 @@
 import Foundation
 
 // MARK: - SavedPlaceViewModel
-extension SavedPlaceViewController {
-    struct SavedPlaceViewModel {
+extension SavedPlaceListViewController {
+    struct ViewModel {
         
         // MARK: - Internal Properties
         private let savedPlace: SavedPlace
@@ -23,7 +23,7 @@ extension SavedPlaceViewController {
 }
 
 // MARK: - SavedPlacePresentable
-extension SavedPlaceViewController.SavedPlaceViewModel: SavedPlacePresentable {
+extension SavedPlaceListViewController.ViewModel: SavedPlacePresentable {
     var title: String {
         return savedPlace.name ?? ""
     }

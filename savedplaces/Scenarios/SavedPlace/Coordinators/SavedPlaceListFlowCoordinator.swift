@@ -8,7 +8,7 @@
 import UIKit
 import LaudoKit
 
-class SavedPlaceListFlowCoordinator: Coordinator {
+final class SavedPlaceListFlowCoordinator: Coordinator {
     
     // MARK: - Internal Properties
     private let navigationController: UINavigationController
@@ -45,20 +45,33 @@ class SavedPlaceListFlowCoordinator: Coordinator {
     private func showSavedPlaceList() {
         
         // Initialize ViewModel
-        let viewModel = SavedPlaceListViewViewModel(repository: SavedPlaceRepository())
+//        let viewModel = SavedPlaceListViewModel(repository: SavedPlaceRepository())
         
         // Install Handlers
-        viewModel.didSelectSavedPlace = { [weak self] savedPlace in
-            self?.runSavedPlaceDetailFlow(with: savedPlace)
-        }
+//        viewModel.didSelectSavedPlace = { [weak self] savedPlace in
+//            self?.runSavedPlaceDetailFlow(with: savedPlace)
+//        }
+        
+        // Initialize ViewController
+//        let viewController = SavedPlaceListViewController(viewModel: viewModel)
+        
+        // Install Handlers
+//        viewController.didHide = { [weak self] in
+//            self?.finish()
+//        }
+        
+        //
+//        navigationController.pushViewController(viewController, animated: true)
+        
+        
+        ///
+        let repository: SavedPlaceRepositoryType = SavedPlaceRepository()
+        
+        // Initialize ViewModel
+        let viewModel = SavedPlaceListViewModel(repository: repository)
         
         // Initialize ViewController
         let viewController = SavedPlaceListViewController(viewModel: viewModel)
-        
-        // Install Handlers
-        viewController.didHide = { [weak self] in
-            self?.finish()
-        }
         
         //
         navigationController.pushViewController(viewController, animated: true)
@@ -68,6 +81,5 @@ class SavedPlaceListFlowCoordinator: Coordinator {
         let coordinator = SavedPlaceDetailFlowCoordinator(savedPlace: savedPlace, navigationController: navigationController)
         pushCoordinator(coordinator)
     }
-    
 }
 

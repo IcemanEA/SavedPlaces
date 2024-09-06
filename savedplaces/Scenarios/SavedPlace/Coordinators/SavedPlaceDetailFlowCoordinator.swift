@@ -8,9 +8,7 @@
 import UIKit
 import LaudoKit
 
-
-class SavedPlaceDetailFlowCoordinator: Coordinator, UIAdaptivePresentationControllerDelegate {
-    
+final class SavedPlaceDetailFlowCoordinator: Coordinator {
     
     // MARK: - Internal Properties
     private let navigationController: UINavigationController
@@ -59,12 +57,7 @@ class SavedPlaceDetailFlowCoordinator: Coordinator, UIAdaptivePresentationContro
         }
     }
     
-    // MARK: - UIAdaptivePresentationControllerDelegate
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        didFinish?(self)
-    }
-    
-    // MARK: - Methods
+    // MARK: - Private Methods
     private func finish() {
         if let initialViewController {
             navigationController.popToViewController(initialViewController, animated: true)
@@ -87,5 +80,12 @@ class SavedPlaceDetailFlowCoordinator: Coordinator, UIAdaptivePresentationContro
         
         // Show
         navigationController.show(viewController, sender: nil)
+    }
+}
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+extension SavedPlaceDetailFlowCoordinator: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        didFinish?(self)
     }
 }

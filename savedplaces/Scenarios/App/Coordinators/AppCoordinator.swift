@@ -8,7 +8,7 @@
 import UIKit
 import LaudoKit
 
-class AppCoordinator: Coordinator {
+final class AppCoordinator: Coordinator {
     
     // MARK: - Properties
     private let window: UIWindow

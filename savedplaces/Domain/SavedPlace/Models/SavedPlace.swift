@@ -7,14 +7,7 @@
 
 import Foundation
 
-
-
 struct SavedPlace: Identifiable {
-
-    static var `default`: SavedPlace {
-        return SavedPlace(id: 0, name: "TEST", address: .init(country: "TEST"))
-    }
-    
     let id: Int
     var name: String?
     var address: Address
@@ -33,3 +26,11 @@ struct Address {
     var houseNumber: String?
 }
 
+// MARK: - Default items
+
+extension SavedPlace {
+    static var `default`: SavedPlace {
+        return SavedPlace(id: 0, name: "TEST", address: .init(country: "TEST"))
+    }
+    
+}

@@ -8,23 +8,19 @@
 import UIKit
 import LaudoKit
 
-class SavedPlaceDetailViewController: NiblessViewController {
+final class SavedPlaceDetailViewController: NiblessViewController {
     
     // MARK: - Output
     var didHide: (() -> Void)?
     
-    
-    
     override init() {
         super.init()
-        
-        self.title = "DETAIL"
     }
     
     private func setupView() {
         view.backgroundColor = .yellow
         
-        
+        self.title = "DETAIL"
     }
     
     private func setupNavigationBar() {
@@ -44,4 +40,3 @@ extension SavedPlaceDetailViewController {
         setupNavigationBar()
     }
 }
-

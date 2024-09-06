@@ -7,26 +7,24 @@
 
 
 // MARK: - ViewModel Type
-protocol SavedPlaceViewViewModelType: AnyObject {
+protocol SavedPlaceListViewModelType: AnyObject {
     
-    // MARK: - Properties
-    
-    // MARK: - Methods
+    func deleteItem(at index: Int)
 }
 
 
 // MARK: - ViewModel
-class SavedPlaceViewViewModel {
+final class SavedPlaceListViewModel {
     
     // MARK: - Output
     
     // MARK: - Internal Properties
-    private let repository: SavedPlaceRepository
+    private let repository: SavedPlaceRepositoryType
     
     // MARK: - Properties
     
     // MARK: - Initialization
-    init(repository: SavedPlaceRepository) {
+    init(repository: SavedPlaceRepositoryType) {
         self.repository = repository
         
     }
@@ -36,7 +34,7 @@ class SavedPlaceViewViewModel {
 
 
 // MARK: - Public API
-extension SavedPlaceViewViewModel: SavedPlaceViewViewModelType {
+extension SavedPlaceListViewModel: SavedPlaceListViewModelType {
     func deleteItem(at index: Int) {
         
     }

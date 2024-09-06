@@ -13,12 +13,17 @@ final class MainViewController: NiblessViewController {
     
     // MARK: - Output
     var didHide: (() -> Void)?
+    var didSelectUIExample: (() -> Void)?
     var didSelectSavedPlaceList: (() -> Void)?
     var didSelectSavedPlaceDetailHorizontal: (() -> Void)?
     var didSelectSavedPlaceDetailVertical: (() -> Void)?
     
     // MARK: - Subviews
-    private lazy var button = UIButton(primaryAction: UIAction(title: "Show SavedPlaceList", handler: { [weak self] _ in
+    private lazy var showUIExampleButton = UIButton(primaryAction: UIAction(title: "Show UI examples", handler: { [weak self] _ in
+        self?.didSelectUIExample?()
+    }))
+    
+    private lazy var showListButton = UIButton(primaryAction: UIAction(title: "Show SavedPlace List", handler: { [weak self] _ in
         self?.didSelectSavedPlaceList?()
     }))
     
@@ -40,22 +45,24 @@ final class MainViewController: NiblessViewController {
     
     // MARK: - Methods
     private func setupView() {
-        
         view.backgroundColor = .systemBackground
         
         view.subviews {
-            button
+            showUIExampleButton
+            showListButton
             showVerticalButton
             showHorizontalButton
         }
         
-        button.centerHorizontally()
+        showUIExampleButton.centerHorizontally()
+        showListButton.centerHorizontally()
         showVerticalButton.centerHorizontally()
         showHorizontalButton.centerHorizontally()
         
-        button.top(100)
-        showVerticalButton.top(200)
-        showHorizontalButton.top(300)
+        showUIExampleButton.top(100)
+        showListButton.top(200)
+        showVerticalButton.top(300)
+        showHorizontalButton.top(400)
     }
     
     private func showAlert() {

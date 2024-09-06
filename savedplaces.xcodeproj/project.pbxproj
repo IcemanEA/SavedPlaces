@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4888E1682C8AE7B70075B78D /* UIExampleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888E1672C8AE7B70075B78D /* UIExampleState.swift */; };
 		B7FE72C52C89AE1E006AB95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72C42C89AE1E006AB95D /* AppDelegate.swift */; };
 		B7FE72C72C89AE1E006AB95D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72C62C89AE1E006AB95D /* SceneDelegate.swift */; };
 		B7FE72CF2C89AE1E006AB95D /* savedplaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72CD2C89AE1E006AB95D /* savedplaces.xcdatamodeld */; };
 		B7FE72D12C89AE1F006AB95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FE72D02C89AE1F006AB95D /* Assets.xcassets */; };
 		B7FE72D42C89AE1F006AB95D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B7FE72D32C89AE1F006AB95D /* Base */; };
-		B7FE72F02C89B12B006AB95D /* SavedPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72EF2C89B12B006AB95D /* SavedPlaceListViewController.swift */; };
-		B7FE72F22C89B13D006AB95D /* SavedPlaceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72F12C89B13D006AB95D /* SavedPlaceEditViewController.swift */; };
+		B7FE72F02C89B12B006AB95D /* UIExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72EF2C89B12B006AB95D /* UIExampleViewController.swift */; };
 		B7FE72F42C89B14D006AB95D /* SavedPlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72F32C89B14D006AB95D /* SavedPlaceDetailViewController.swift */; };
 		B7FE72F62C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72F52C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift */; };
 		B7FE72F82C89B179006AB95D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72F72C89B179006AB95D /* AppCoordinator.swift */; };
@@ -22,20 +22,19 @@
 		B7FE73002C89B2AF006AB95D /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72FF2C89B2AF006AB95D /* MainFlowCoordinator.swift */; };
 		B7FE73032C89B460006AB95D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73022C89B460006AB95D /* MainViewController.swift */; };
 		B7FE73052C89B640006AB95D /* SavedPlaceDetailFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73042C89B640006AB95D /* SavedPlaceDetailFlowCoordinator.swift */; };
-		B7FE73072C89C543006AB95D /* SavedPlaceListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73062C89C543006AB95D /* SavedPlaceListViewViewModel.swift */; };
-		B7FE73092C89C55B006AB95D /* SavedPlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73082C89C55B006AB95D /* SavedPlaceListView.swift */; };
+		B7FE73072C89C543006AB95D /* UIExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73062C89C543006AB95D /* UIExampleViewModel.swift */; };
+		B7FE73092C89C55B006AB95D /* UIExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73082C89C55B006AB95D /* UIExampleView.swift */; };
 		B7FE730B2C89C7EB006AB95D /* SavedPlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE730A2C89C7EB006AB95D /* SavedPlaceRepository.swift */; };
 		B7FE730D2C89C805006AB95D /* SavedPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE730C2C89C805006AB95D /* SavedPlace.swift */; };
-		B7FE73102C89EA8D006AB95D /* SavedPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE730F2C89EA8D006AB95D /* SavedPlaceViewController.swift */; };
-		B7FE73122C89EAAF006AB95D /* SavedPlaceViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73112C89EAAF006AB95D /* SavedPlaceViewViewModel.swift */; };
-		B7FE73162C89EBB0006AB95D /* SavedPlaceListView+SavedPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73152C89EBB0006AB95D /* SavedPlaceListView+SavedPlaceCell.swift */; };
-		B7FE73182C89ECE0006AB95D /* SavedPlaceListView+SavedPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73172C89ECE0006AB95D /* SavedPlaceListView+SavedPlaceViewModel.swift */; };
-		B7FE731A2C89EE04006AB95D /* SavedPlaceFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73192C89EE04006AB95D /* SavedPlaceFlowCoordinator.swift */; };
+		B7FE73102C89EA8D006AB95D /* SavedPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE730F2C89EA8D006AB95D /* SavedPlaceListViewController.swift */; };
+		B7FE73122C89EAAF006AB95D /* SavedPlaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73112C89EAAF006AB95D /* SavedPlaceListViewModel.swift */; };
+		B7FE731A2C89EE04006AB95D /* UIExampleFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE73192C89EE04006AB95D /* UIExampleFlowCoordinator.swift */; };
 		B7FE731D2C89EFE2006AB95D /* SavedPlaceView+SavedPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE731C2C89EFE2006AB95D /* SavedPlaceView+SavedPlaceCell.swift */; };
-		B7FE73202C89F407006AB95D /* SavedPlaceViewController+SavedPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE731F2C89F407006AB95D /* SavedPlaceViewController+SavedPlaceViewModel.swift */; };
+		B7FE73202C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE731F2C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4888E1672C8AE7B70075B78D /* UIExampleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleState.swift; sourceTree = "<group>"; };
 		B7FE72C12C89AE1E006AB95D /* savedplaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = savedplaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FE72C42C89AE1E006AB95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7FE72C62C89AE1E006AB95D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,25 +42,22 @@
 		B7FE72D02C89AE1F006AB95D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7FE72D32C89AE1F006AB95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7FE72D52C89AE1F006AB95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7FE72EF2C89B12B006AB95D /* SavedPlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListViewController.swift; sourceTree = "<group>"; };
-		B7FE72F12C89B13D006AB95D /* SavedPlaceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceEditViewController.swift; sourceTree = "<group>"; };
+		B7FE72EF2C89B12B006AB95D /* UIExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleViewController.swift; sourceTree = "<group>"; };
 		B7FE72F32C89B14D006AB95D /* SavedPlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceDetailViewController.swift; sourceTree = "<group>"; };
 		B7FE72F52C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7FE72F72C89B179006AB95D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B7FE72FF2C89B2AF006AB95D /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7FE73022C89B460006AB95D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7FE73042C89B640006AB95D /* SavedPlaceDetailFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceDetailFlowCoordinator.swift; sourceTree = "<group>"; };
-		B7FE73062C89C543006AB95D /* SavedPlaceListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListViewViewModel.swift; sourceTree = "<group>"; };
-		B7FE73082C89C55B006AB95D /* SavedPlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListView.swift; sourceTree = "<group>"; };
+		B7FE73062C89C543006AB95D /* UIExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleViewModel.swift; sourceTree = "<group>"; };
+		B7FE73082C89C55B006AB95D /* UIExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleView.swift; sourceTree = "<group>"; };
 		B7FE730A2C89C7EB006AB95D /* SavedPlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceRepository.swift; sourceTree = "<group>"; };
 		B7FE730C2C89C805006AB95D /* SavedPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlace.swift; sourceTree = "<group>"; };
-		B7FE730F2C89EA8D006AB95D /* SavedPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceViewController.swift; sourceTree = "<group>"; };
-		B7FE73112C89EAAF006AB95D /* SavedPlaceViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceViewViewModel.swift; sourceTree = "<group>"; };
-		B7FE73152C89EBB0006AB95D /* SavedPlaceListView+SavedPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPlaceListView+SavedPlaceCell.swift"; sourceTree = "<group>"; };
-		B7FE73172C89ECE0006AB95D /* SavedPlaceListView+SavedPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPlaceListView+SavedPlaceViewModel.swift"; sourceTree = "<group>"; };
-		B7FE73192C89EE04006AB95D /* SavedPlaceFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceFlowCoordinator.swift; sourceTree = "<group>"; };
+		B7FE730F2C89EA8D006AB95D /* SavedPlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListViewController.swift; sourceTree = "<group>"; };
+		B7FE73112C89EAAF006AB95D /* SavedPlaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListViewModel.swift; sourceTree = "<group>"; };
+		B7FE73192C89EE04006AB95D /* UIExampleFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleFlowCoordinator.swift; sourceTree = "<group>"; };
 		B7FE731C2C89EFE2006AB95D /* SavedPlaceView+SavedPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPlaceView+SavedPlaceCell.swift"; sourceTree = "<group>"; };
-		B7FE731F2C89F407006AB95D /* SavedPlaceViewController+SavedPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPlaceViewController+SavedPlaceViewModel.swift"; sourceTree = "<group>"; };
+		B7FE731F2C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPlaceListViewController+SavedPlaceViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +73,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4888E1622C8AD3890075B78D /* UIExample */ = {
+			isa = PBXGroup;
+			children = (
+				4888E1632C8AD3A10075B78D /* Coordinators */,
+				4888E1642C8AD3AB0075B78D /* Scenes */,
+			);
+			path = UIExample;
+			sourceTree = "<group>";
+		};
+		4888E1632C8AD3A10075B78D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B7FE73192C89EE04006AB95D /* UIExampleFlowCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		4888E1642C8AD3AB0075B78D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B7FE72EC2C89B10D006AB95D /* Default */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4888E1662C8AE7A40075B78D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4888E1672C8AE7B70075B78D /* UIExampleState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B7FE72B82C89AE1E006AB95D = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +174,7 @@
 			children = (
 				B7FE72E42C89B0A6006AB95D /* App */,
 				B7FE72E52C89B0AC006AB95D /* Main */,
+				4888E1622C8AD3890075B78D /* UIExample */,
 				B7FE72E92C89B0E2006AB95D /* SavedPlace */,
 			);
 			path = Scenarios;
@@ -230,7 +260,6 @@
 			children = (
 				B7FE72F52C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift */,
 				B7FE73042C89B640006AB95D /* SavedPlaceDetailFlowCoordinator.swift */,
-				B7FE73192C89EE04006AB95D /* SavedPlaceFlowCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -238,32 +267,21 @@
 		B7FE72EB2C89B107006AB95D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B7FE730E2C89EA7A006AB95D /* Default */,
-				B7FE72EC2C89B10D006AB95D /* List */,
-				B7FE72ED2C89B115006AB95D /* Edit */,
+				B7FE730E2C89EA7A006AB95D /* List */,
 				B7FE72EE2C89B11B006AB95D /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		B7FE72EC2C89B10D006AB95D /* List */ = {
+		B7FE72EC2C89B10D006AB95D /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				B7FE73142C89EB90006AB95D /* ViewModels */,
-				B7FE73132C89EB89006AB95D /* Views */,
-				B7FE72EF2C89B12B006AB95D /* SavedPlaceListViewController.swift */,
-				B7FE73062C89C543006AB95D /* SavedPlaceListViewViewModel.swift */,
-				B7FE73082C89C55B006AB95D /* SavedPlaceListView.swift */,
+				4888E1662C8AE7A40075B78D /* Enums */,
+				B7FE72EF2C89B12B006AB95D /* UIExampleViewController.swift */,
+				B7FE73062C89C543006AB95D /* UIExampleViewModel.swift */,
+				B7FE73082C89C55B006AB95D /* UIExampleView.swift */,
 			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		B7FE72ED2C89B115006AB95D /* Edit */ = {
-			isa = PBXGroup;
-			children = (
-				B7FE72F12C89B13D006AB95D /* SavedPlaceEditViewController.swift */,
-			);
-			path = Edit;
+			path = Default;
 			sourceTree = "<group>";
 		};
 		B7FE72EE2C89B11B006AB95D /* Detail */ = {
@@ -282,31 +300,15 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
-		B7FE730E2C89EA7A006AB95D /* Default */ = {
+		B7FE730E2C89EA7A006AB95D /* List */ = {
 			isa = PBXGroup;
 			children = (
 				B7FE731E2C89F3F8006AB95D /* ViewModels */,
 				B7FE731B2C89EFD3006AB95D /* Views */,
-				B7FE730F2C89EA8D006AB95D /* SavedPlaceViewController.swift */,
-				B7FE73112C89EAAF006AB95D /* SavedPlaceViewViewModel.swift */,
+				B7FE730F2C89EA8D006AB95D /* SavedPlaceListViewController.swift */,
+				B7FE73112C89EAAF006AB95D /* SavedPlaceListViewModel.swift */,
 			);
-			path = Default;
-			sourceTree = "<group>";
-		};
-		B7FE73132C89EB89006AB95D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B7FE73152C89EBB0006AB95D /* SavedPlaceListView+SavedPlaceCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B7FE73142C89EB90006AB95D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				B7FE73172C89ECE0006AB95D /* SavedPlaceListView+SavedPlaceViewModel.swift */,
-			);
-			path = ViewModels;
+			path = List;
 			sourceTree = "<group>";
 		};
 		B7FE731B2C89EFD3006AB95D /* Views */ = {
@@ -320,7 +322,7 @@
 		B7FE731E2C89F3F8006AB95D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B7FE731F2C89F407006AB95D /* SavedPlaceViewController+SavedPlaceViewModel.swift */,
+				B7FE731F2C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -403,28 +405,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FE73102C89EA8D006AB95D /* SavedPlaceViewController.swift in Sources */,
+				B7FE73102C89EA8D006AB95D /* SavedPlaceListViewController.swift in Sources */,
 				B7FE731D2C89EFE2006AB95D /* SavedPlaceView+SavedPlaceCell.swift in Sources */,
-				B7FE73162C89EBB0006AB95D /* SavedPlaceListView+SavedPlaceCell.swift in Sources */,
-				B7FE731A2C89EE04006AB95D /* SavedPlaceFlowCoordinator.swift in Sources */,
-				B7FE72F02C89B12B006AB95D /* SavedPlaceListViewController.swift in Sources */,
-				B7FE72F22C89B13D006AB95D /* SavedPlaceEditViewController.swift in Sources */,
-				B7FE73122C89EAAF006AB95D /* SavedPlaceViewViewModel.swift in Sources */,
+				B7FE731A2C89EE04006AB95D /* UIExampleFlowCoordinator.swift in Sources */,
+				4888E1682C8AE7B70075B78D /* UIExampleState.swift in Sources */,
+				B7FE72F02C89B12B006AB95D /* UIExampleViewController.swift in Sources */,
+				B7FE73122C89EAAF006AB95D /* SavedPlaceListViewModel.swift in Sources */,
 				B7FE72F42C89B14D006AB95D /* SavedPlaceDetailViewController.swift in Sources */,
 				B7FE73052C89B640006AB95D /* SavedPlaceDetailFlowCoordinator.swift in Sources */,
 				B7FE72C52C89AE1E006AB95D /* AppDelegate.swift in Sources */,
 				B7FE72C72C89AE1E006AB95D /* SceneDelegate.swift in Sources */,
-				B7FE73092C89C55B006AB95D /* SavedPlaceListView.swift in Sources */,
+				B7FE73092C89C55B006AB95D /* UIExampleView.swift in Sources */,
 				B7FE73002C89B2AF006AB95D /* MainFlowCoordinator.swift in Sources */,
 				B7FE72F82C89B179006AB95D /* AppCoordinator.swift in Sources */,
 				B7FE730D2C89C805006AB95D /* SavedPlace.swift in Sources */,
-				B7FE73202C89F407006AB95D /* SavedPlaceViewController+SavedPlaceViewModel.swift in Sources */,
+				B7FE73202C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift in Sources */,
 				B7FE730B2C89C7EB006AB95D /* SavedPlaceRepository.swift in Sources */,
 				B7FE72F62C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift in Sources */,
-				B7FE73072C89C543006AB95D /* SavedPlaceListViewViewModel.swift in Sources */,
+				B7FE73072C89C543006AB95D /* UIExampleViewModel.swift in Sources */,
 				B7FE72CF2C89AE1E006AB95D /* savedplaces.xcdatamodeld in Sources */,
 				B7FE73032C89B460006AB95D /* MainViewController.swift in Sources */,
-				B7FE73182C89ECE0006AB95D /* SavedPlaceListView+SavedPlaceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

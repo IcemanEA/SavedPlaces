@@ -14,7 +14,7 @@ protocol SavedPlacePresentable {
     var subtitle: String { get }
 }
 
-extension SavedPlaceViewController {
+extension SavedPlaceListViewController {
     class SavedPlaceCell: LTableViewCell {
         
         // MARK: - Subviews
