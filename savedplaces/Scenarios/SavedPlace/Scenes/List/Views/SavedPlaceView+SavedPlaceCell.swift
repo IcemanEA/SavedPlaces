@@ -9,19 +9,21 @@ import UIKit
 import Stevia
 import LaudoKit
 
-protocol SavedPlacePresentable {
-    var title: String { get }
-    var subtitle: String { get }
+protocol SavedPlacePresentable: Hashable {
+    var title: String? { get }
+    var subtitle: String? { get }
 }
 
-extension SavedPlaceListViewController {
+extension SavedPlaceListView {
     class SavedPlaceCell: LTableViewCell {
         
         // MARK: - Subviews
         private let titleLabel = LLabel(text: "Title")
-        private let subtitleLabel = LLabel(text: "Subtitle").foregroundColor(.gray)
+        private let subtitleLabel = LLabel(text: "Subtitle")
+            .foregroundColor(.gray)
         
-        private lazy var mainStackView = LVerticalStackView(arrangedSubviews: [titleLabel, subtitleLabel]).spacing(3)
+        private lazy var mainStackView = LVerticalStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+            .spacing(3)
         
         //
         override func initialize() {
@@ -36,11 +38,15 @@ extension SavedPlaceListViewController {
                 .fillHorizontally(padding: 20)
         }
         
-        func configure(with presentable: SavedPlacePresentable) {
-            titleLabel.text(presentable.title)
+        func configure(with presentable: SavedPlaceListViewController.ViewModel) {
+            if let text = presentable.title {
+                titleLabel.text(text)
+            } else {
+                titleLabel.isHidden = true
+            }
+            
             subtitleLabel.text(presentable.subtitle)
         }
     }
 }
-
 

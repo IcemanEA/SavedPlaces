@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481939CA2C8AEF1300E3A941 /* SavedPlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481939C92C8AEF1300E3A941 /* SavedPlaceListView.swift */; };
 		4888E1682C8AE7B70075B78D /* UIExampleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888E1672C8AE7B70075B78D /* UIExampleState.swift */; };
 		B7FE72C52C89AE1E006AB95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72C42C89AE1E006AB95D /* AppDelegate.swift */; };
 		B7FE72C72C89AE1E006AB95D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE72C62C89AE1E006AB95D /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481939C92C8AEF1300E3A941 /* SavedPlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlaceListView.swift; sourceTree = "<group>"; };
 		4888E1672C8AE7B70075B78D /* UIExampleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExampleState.swift; sourceTree = "<group>"; };
 		B7FE72C12C89AE1E006AB95D /* savedplaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = savedplaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FE72C42C89AE1E006AB95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				B7FE731B2C89EFD3006AB95D /* Views */,
 				B7FE730F2C89EA8D006AB95D /* SavedPlaceListViewController.swift */,
 				B7FE73112C89EAAF006AB95D /* SavedPlaceListViewModel.swift */,
+				481939C92C8AEF1300E3A941 /* SavedPlaceListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				B7FE72F82C89B179006AB95D /* AppCoordinator.swift in Sources */,
 				B7FE730D2C89C805006AB95D /* SavedPlace.swift in Sources */,
 				B7FE73202C89F407006AB95D /* SavedPlaceListViewController+SavedPlaceViewModel.swift in Sources */,
+				481939CA2C8AEF1300E3A941 /* SavedPlaceListView.swift in Sources */,
 				B7FE730B2C89C7EB006AB95D /* SavedPlaceRepository.swift in Sources */,
 				B7FE72F62C89B169006AB95D /* SavedPlaceListFlowCoordinator.swift in Sources */,
 				B7FE73072C89C543006AB95D /* UIExampleViewModel.swift in Sources */,

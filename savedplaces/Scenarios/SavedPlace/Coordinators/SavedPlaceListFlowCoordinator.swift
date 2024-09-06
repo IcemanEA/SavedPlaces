@@ -47,21 +47,6 @@ final class SavedPlaceListFlowCoordinator: Coordinator {
         // Initialize ViewModel
 //        let viewModel = SavedPlaceListViewModel(repository: SavedPlaceRepository())
         
-        // Install Handlers
-//        viewModel.didSelectSavedPlace = { [weak self] savedPlace in
-//            self?.runSavedPlaceDetailFlow(with: savedPlace)
-//        }
-        
-        // Initialize ViewController
-//        let viewController = SavedPlaceListViewController(viewModel: viewModel)
-        
-        // Install Handlers
-//        viewController.didHide = { [weak self] in
-//            self?.finish()
-//        }
-        
-        //
-//        navigationController.pushViewController(viewController, animated: true)
         
         
         ///
@@ -72,8 +57,12 @@ final class SavedPlaceListFlowCoordinator: Coordinator {
         
         // Initialize ViewController
         let viewController = SavedPlaceListViewController(viewModel: viewModel)
+       
+        // Install Handlers
+        viewController.didSelectPlace = { [weak self] savedPlace in
+            self?.runSavedPlaceDetailFlow(with: savedPlace)
+        }
         
-        //
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -82,4 +71,3 @@ final class SavedPlaceListFlowCoordinator: Coordinator {
         pushCoordinator(coordinator)
     }
 }
-

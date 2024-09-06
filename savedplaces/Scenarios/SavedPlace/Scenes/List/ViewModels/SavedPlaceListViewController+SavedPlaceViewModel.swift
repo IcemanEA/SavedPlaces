@@ -11,6 +11,36 @@ import Foundation
 extension SavedPlaceListViewController {
     struct ViewModel {
         
+        // MARK: - Output properties
+        var title: String? {
+            return savedPlace.name
+        }
+        
+        var subtitle: String? {
+            var address = ""
+            
+            if let string = savedPlace.address.country {
+                address += string
+            }
+            
+            if let string = savedPlace.address.city {
+                address = address == "" ? string : ", " + string
+            }
+            
+            if let string = savedPlace.address.street {
+                address = address == "" ? string : ", " + string
+            }
+            
+            if let string = savedPlace.address.houseNumber {
+                address = address == "" ? string : ", " + string
+            }
+            if address == "" {
+                return nil
+            } else {
+                return address
+            }
+        }
+        
         // MARK: - Internal Properties
         private let savedPlace: SavedPlace
         
@@ -18,17 +48,15 @@ extension SavedPlaceListViewController {
         init(savedPlace: SavedPlace) {
             self.savedPlace = savedPlace
         }
-        
     }
 }
 
-// MARK: - SavedPlacePresentable
-extension SavedPlaceListViewController.ViewModel: SavedPlacePresentable {
-    var title: String {
-        return savedPlace.name ?? ""
-    }
-    
-    var subtitle: String {
-        return ""
+// MARK: - Equatable
+extension SavedPlaceListViewController.ViewModel: Equatable {
+    static func == (lhs: SavedPlaceListViewController.ViewModel, rhs: SavedPlaceListViewController.ViewModel) -> Bool {
+        lhs.savedPlace.name == rhs.savedPlace.name
     }
 }
+
+// MARK: - Hashable
+extension SavedPlaceListViewController.ViewModel: Hashable {}

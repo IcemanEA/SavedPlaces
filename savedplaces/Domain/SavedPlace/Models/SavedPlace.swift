@@ -34,3 +34,13 @@ extension SavedPlace {
     }
     
 }
+
+extension SavedPlace: Equatable, Hashable {
+    static func == (lhs: SavedPlace, rhs: SavedPlace) -> Bool {
+        lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

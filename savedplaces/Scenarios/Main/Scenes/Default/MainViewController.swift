@@ -12,7 +12,6 @@ import Stevia
 final class MainViewController: NiblessViewController {
     
     // MARK: - Output
-    var didHide: (() -> Void)?
     var didSelectUIExample: (() -> Void)?
     var didSelectSavedPlaceList: (() -> Void)?
     var didSelectSavedPlaceDetailHorizontal: (() -> Void)?
