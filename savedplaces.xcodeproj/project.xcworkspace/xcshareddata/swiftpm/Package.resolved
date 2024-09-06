@@ -1,0 +1,33 @@
+{
+  "originHash" : "ab5c4138c2dafb881dfe9ea387d44a68dc02e058d2165c1ef0c9bcaf5b0a6d13",
+  "pins" : [
+    {
+      "identity" : "laudokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Proalab/LaudoKit",
+      "state" : {
+        "revision" : "f5c361297de39fbca9e4e374dcacd8bbfa76e814",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "stevia",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freshOS/Stevia",
+      "state" : {
+        "revision" : "090ffddd48f2f64f5c17a74f0cc61fe9387d71a5",
+        "version" : "5.1.4"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject",
+      "state" : {
+        "revision" : "be9dbcc7b86811bc131539a20c6f9c2d3e56919f",
+        "version" : "2.9.1"
+      }
+    }
+  ],
+  "version" : 3
+}
